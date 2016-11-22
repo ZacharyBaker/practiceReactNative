@@ -20,7 +20,7 @@ export default class PracticeRNative extends Component {
           Welcome to Hogwarts!!!
         </Text>
         <Text style={styles.instructions}>
-          To get started, edit index.ios.js
+          HUFFLEPUFF!!
         </Text>
         <Text style={styles.instructions}>
           Press Cmd+R to reload,{'\n'}
