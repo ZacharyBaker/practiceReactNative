@@ -11,6 +11,7 @@ import {
   Text,
   View
 } from 'react-native';
+import TestComponent from './TestComponent';
 
 export default class practiceNative extends Component {
   render() {
@@ -26,6 +27,8 @@ export default class practiceNative extends Component {
           Press Cmd+R to reload,{'\n'}
           Cmd+D or shake for dev menu
         </Text>
+
+        <TestComponent />
       </View>
     );
   }
