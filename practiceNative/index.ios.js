@@ -17,10 +17,10 @@ export default class practiceNative extends Component {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          Welcome to React Native!
+          Welcome to HOGWARTS!
         </Text>
         <Text style={styles.instructions}>
-          HUFFLEPUFF!
+          HUFFLEPUFF FOR LIFE
         </Text>
         <Text style={styles.instructions}>
           Press Cmd+R to reload,{'\n'}
