@@ -51,6 +51,10 @@ const styles = StyleSheet.create({
     color: '#333333',
     marginBottom: 5,
   },
+  logo: {
+    width: 66,
+    height: 55
+  }
 });
 
 AppRegistry.registerComponent('practiceNative', () => practiceNative);
