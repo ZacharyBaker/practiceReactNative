@@ -11,18 +11,27 @@ import {
 export default class TestComponent extends Component {
 	render() {
 		return (
-				<Text>
-					Hey I am text. and a test. i am two tings.
+				<View style={styles.container}>
 					<Image style={styles.logo} source={ require('./img/handstand.jpg') } />
-				</Text>
+					<Text style={styles.title}>Handstand on a Boat</Text>
+				</View>
 		)
 	}
 }
 
 const styles = StyleSheet.create({
 	logo: {
-		width: 66,
-		height: 55
+		width: 196,
+		height: 185,
+	},
+	title: {
+		fontSize: 28,
+		paddingTop: 25,
+	},
+	container: {
+		flex: 1,
+		justifyContent: 'center',
+		alignItems: 'center',
 	}
 });
 
