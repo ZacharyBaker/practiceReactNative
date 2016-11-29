@@ -30,6 +30,7 @@ const styles = StyleSheet.create({
 	title: {
 		fontSize: 28,
 		paddingTop: 25,
+		color: 'skyblue'
 	},
 	container: {
 		flex: 1,
@@ -42,7 +43,8 @@ const styles = StyleSheet.create({
 		marginTop: 10,
 		padding: 5,
 		borderWidth: 1,
-		borderColor: '#48bbec'
+		borderColor: '#48bbec',
+		borderRadius: 10
 	}
 });
 
