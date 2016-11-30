@@ -77,6 +77,7 @@ const styles = StyleSheet.create({
 		backgroundColor: 'skyblue',
 		alignSelf: 'stretch',
 		justifyContent: 'center',
+		borderRadius: 10,
 	},
 	buttonText: {
 		fontSize: 22,
