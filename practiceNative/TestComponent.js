@@ -11,13 +11,17 @@ import {
 } from 'react-native';
 
 export default class TestComponent extends Component {
+	constructor(props){
+		super(props);
+	}
+
 	render() {
 		return (
 				<View style={styles.container}>
 					<Image style={styles.logo} source={ require('./img/handstand.jpg') } />
 					<Text style={styles.title}>Handstand on a Boat</Text>
-					<TextInput style={styles.input} placeholder="HandStand Username"/>
-					<TextInput style={styles.input} placeholder="HandStand Password" secureTextEntry="true"/>
+					<TextInput onChangeText={text => console.log(text)} style={styles.input} placeholder="HandStand Username"/>
+					<TextInput style={styles.input} placeholder="HandStand Password" secureTextEntry={true}/>
 					<TouchableHighlight style={styles.button}>
 						<Text style={styles.buttonText}>Log In</Text>
 					</TouchableHighlight>
