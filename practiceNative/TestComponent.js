@@ -13,6 +13,23 @@ import {
 export default class TestComponent extends Component {
 	constructor(props){
 		super(props);
+		this.state = {
+			username: '',
+			password: ''
+		}
+
+		this.handleUserChange = this.handleUserChange.bind(this);
+		this.handlePassChange = this.handlePassChange.bind(this);
+	}
+
+	handleUserChange (username) {
+		this.setState({username});
+		console.log('THIS IS THE STATE', this.state)
+	}
+
+	handlePassChange (password) {
+		this.setState({password});
+		console.log('THIS IS THE STATE', this.state)
 	}
 
 	render() {
@@ -20,8 +37,8 @@ export default class TestComponent extends Component {
 				<View style={styles.container}>
 					<Image style={styles.logo} source={ require('./img/handstand.jpg') } />
 					<Text style={styles.title}>Handstand on a Boat</Text>
-					<TextInput onChangeText={text => console.log(text)} style={styles.input} placeholder="HandStand Username"/>
-					<TextInput style={styles.input} placeholder="HandStand Password" secureTextEntry={true}/>
+					<TextInput onChangeText={this.handleUserChange} style={styles.input} placeholder="HandStand Username"/>
+					<TextInput onChangeText={this.handlePassChange} style={styles.input} placeholder="HandStand Password" secureTextEntry={true}/>
 					<TouchableHighlight style={styles.button}>
 						<Text style={styles.buttonText}>Log In</Text>
 					</TouchableHighlight>
