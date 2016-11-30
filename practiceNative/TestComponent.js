@@ -6,6 +6,7 @@ import {
   StyleSheet,
   Text,
   View,
+  TouchableHighlight,
   TextInput
 } from 'react-native';
 
@@ -17,6 +18,9 @@ export default class TestComponent extends Component {
 					<Text style={styles.title}>Handstand on a Boat</Text>
 					<TextInput style={styles.input} placeholder="HandStand Username"/>
 					<TextInput style={styles.input} placeholder="HandStand Password" secureTextEntry="true"/>
+					<TouchableHighlight style={styles.button}>
+						<Text style={styles.buttonText}>Log In</Text>
+					</TouchableHighlight>
 				</View>
 		)
 	}
@@ -45,6 +49,18 @@ const styles = StyleSheet.create({
 		borderWidth: 1,
 		borderColor: '#48bbec',
 		borderRadius: 10
+	},
+	button: {
+		height: 50,
+		marginTop: 10,
+		backgroundColor: 'skyblue',
+		alignSelf: 'stretch',
+		justifyContent: 'center',
+	},
+	buttonText: {
+		fontSize: 22,
+		color: '#FFF',
+		alignSelf: 'center',
 	}
 });
 
