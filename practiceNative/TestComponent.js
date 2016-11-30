@@ -20,6 +20,7 @@ export default class TestComponent extends Component {
 
 		this.handleUserChange = this.handleUserChange.bind(this);
 		this.handlePassChange = this.handlePassChange.bind(this);
+		this.onLoginPressed = this.onLoginPressed.bind(this);
 	}
 
 	handleUserChange (username) {
@@ -32,6 +33,10 @@ export default class TestComponent extends Component {
 		console.log('THIS IS THE STATE', this.state)
 	}
 
+	onLoginPressed () {
+		console.log('Attempting to login with ' + this.state.username + '!!!');
+	}
+
 	render() {
 		return (
 				<View style={styles.container}>
@@ -39,7 +44,9 @@ export default class TestComponent extends Component {
 					<Text style={styles.title}>Handstand on a Boat</Text>
 					<TextInput onChangeText={this.handleUserChange} style={styles.input} placeholder="HandStand Username"/>
 					<TextInput onChangeText={this.handlePassChange} style={styles.input} placeholder="HandStand Password" secureTextEntry={true}/>
-					<TouchableHighlight style={styles.button}>
+					<TouchableHighlight 
+						onPress={this.onLoginPressed}
+						style={styles.button}>
 						<Text style={styles.buttonText}>Log In</Text>
 					</TouchableHighlight>
 				</View>
@@ -85,5 +92,3 @@ const styles = StyleSheet.create({
 		alignSelf: 'center',
 	}
 });
-
-module.exports = TestComponent;
