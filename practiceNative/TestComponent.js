@@ -7,6 +7,7 @@ import {
   Text,
   View,
   TouchableHighlight,
+  ActivityIndicator,
   TextInput
 } from 'react-native';
 
@@ -15,7 +16,8 @@ export default class TestComponent extends Component {
 		super(props);
 		this.state = {
 			username: '',
-			password: ''
+			password: '',
+			showProgress: false
 		}
 	}
 
@@ -31,6 +33,7 @@ export default class TestComponent extends Component {
 
 	onLoginPressed = () => {
 		console.log('Attempting to login with ' + this.state.username + '!!!');
+		this.setState({showProgress: true})
 	}
 
 	render() {
@@ -45,6 +48,11 @@ export default class TestComponent extends Component {
 						style={styles.button}>
 						<Text style={styles.buttonText}>Log In</Text>
 					</TouchableHighlight>
+
+					<ActivityIndicator 
+						animating={this.state.showProgress}
+						size='large' 
+					/>
 				</View>
 		)
 	}
