@@ -17,23 +17,19 @@ export default class TestComponent extends Component {
 			username: '',
 			password: ''
 		}
-
-		this.handleUserChange = this.handleUserChange.bind(this);
-		this.handlePassChange = this.handlePassChange.bind(this);
-		this.onLoginPressed = this.onLoginPressed.bind(this);
 	}
 
-	handleUserChange (username) {
+	handleUserChange = (username) => {
 		this.setState({username});
 		console.log('THIS IS THE STATE', this.state)
 	}
 
-	handlePassChange (password) {
+	handlePassChange = (password) => {
 		this.setState({password});
 		console.log('THIS IS THE STATE', this.state)
 	}
 
-	onLoginPressed () {
+	onLoginPressed = () => {
 		console.log('Attempting to login with ' + this.state.username + '!!!');
 	}
 
